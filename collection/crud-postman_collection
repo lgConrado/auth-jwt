@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "4e4394e0-29a9-47a9-b80a-2fc88608aaff",
+		"name": "CRUD - Express-Node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31489611"
+	},
+	"item": [
+		{
+			"name": "Lista Pessoas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/pessoas",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"pessoas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Seleciona Pessoa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/pessoas/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"pessoas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filtra Pessoa CPF",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/pessoas/busca-cpf/96175091051",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"pessoas",
+						"busca-cpf",
+						"96175091051"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastra Pessoa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Teste 04\",\r\n    \"email\": \"example@gmail.com\",\r\n    \"telefone\": \"4499998888\",\r\n    \"nascimento\": \"01/01/2000\",\r\n    \"cpf\": \"961.750.910-51\",\r\n    \"status\": \"Ativo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/pessoas",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"pessoas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualiza Pessoa",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Teste 04\",\r\n    \"email\": \"example@gmail.com\",\r\n    \"telefone\": \"4499998888\",\r\n    \"nascimento\": \"04/04/2004\",\r\n    \"cpf\": \"96175091051\",\r\n    \"status\": \"Inativo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/pessoas/5",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"pessoas",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exclui Pessoa",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Teste 04\",\r\n    \"email\": \"example@gmail.com\",\r\n    \"telefone\": \"4499998888\",\r\n    \"nascimento\": \"04/04/2004\",\r\n    \"cpf\": \"96175091051\",\r\n    \"status\": \"Inativo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/pessoas/8",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"pessoas",
+						"8"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
